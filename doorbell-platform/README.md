@@ -5,7 +5,7 @@ Production-oriented minimal monorepo for QR-based WebRTC doorbell using React PW
 ## Structure
 
 - `backend/` Express API + auth + SQLite + WS notifications
-- `frontend/` React PWA (visitor and owner flows) + PeerJS client
+- `frontend/` React PWA (visitor and owner flows) + PeerJS client + Tailwind CSS UI
 - `infra/` Docker, nginx reverse proxy, coturn, peer server
 - `scripts/generate-qrcode.js` QR generation utility
 
