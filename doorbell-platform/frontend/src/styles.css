@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #0f172a; color: #e2e8f0; }
+nav { padding: 12px; background: #1e293b; }
+a { color: #93c5fd; }
+.container { max-width: 960px; margin: 0 auto; padding: 16px; }
+.row { display: flex; gap: 8px; margin: 8px 0; }
+input, button { padding: 10px; border-radius: 8px; border: 1px solid #334155; }
+button { background: #2563eb; color: white; cursor: pointer; }
+.videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.video-card { background: #1e293b; padding: 12px; border-radius: 12px; }
+video { width: 100%; border-radius: 8px; background: black; min-height: 180px; }

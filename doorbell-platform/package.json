@@ -1,0 +1,14 @@
+{
+  "name": "doorbell-platform",
+  "private": true,
+  "workspaces": ["backend", "frontend"],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev:backend": "npm --workspace backend run dev",
+    "dev:frontend": "npm --workspace frontend run dev",
+    "build": "npm -ws run build"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  }
+}
