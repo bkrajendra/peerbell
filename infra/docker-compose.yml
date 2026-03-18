@@ -1,4 +1,4 @@
-version: '3.9'
+
 services:
   backend:
     build:
@@ -10,10 +10,10 @@ services:
       JWT_SECRET: super-secret
       CORS_ORIGIN: http://localhost
       ICE_SERVERS_JSON: '[{"urls":"stun:stun.l.google.com:19302"},{"urls":"turn:localhost:3478","username":"doorbell","credential":"doorbellpass"}]'
-      VAPID_PUBLIC_KEY: PUBLIC_KEY_PLACEHOLDER
-      VAPID_PRIVATE_KEY: PRIVATE_KEY_PLACEHOLDER
+      VAPID_PUBLIC_KEY: BCHUw0lnB_weWfKVnCSKg4cJVggwchtHug1-rsdjm_TtShxK50ll4gSEx-WnB_wizHRXuhAoLKzL976GKe0WoJU
+      VAPID_PRIVATE_KEY: Lpvt9toz-eFQz0Gs0pu4N4IQUVb3oeudaqIjfTnqYpk
     volumes:
-      - backend_data:/app/data
+      - ./backend_data:/app/data
     networks: [doorbell]
 
   frontend:
@@ -31,6 +31,8 @@ services:
     build:
       context: ..
       dockerfile: infra/docker/peerjs/Dockerfile
+    ports:
+      - "9000:9000"
     networks: [doorbell]
 
   coturn:
@@ -55,5 +57,5 @@ services:
 networks:
   doorbell:
 
-volumes:
-  backend_data:
+# volumes:
+#   backend_data:

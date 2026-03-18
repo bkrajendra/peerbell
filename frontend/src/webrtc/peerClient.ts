@@ -1,7 +1,7 @@
 import Peer from 'peerjs';
 
 export function createPeer(peerId?: string) {
-  return new Peer(peerId, {
+  const options = {
     host: import.meta.env.VITE_PEER_HOST || location.hostname,
     port: Number(import.meta.env.VITE_PEER_PORT || 9000),
     path: import.meta.env.VITE_PEER_PATH || '/peerjs',
@@ -16,5 +16,7 @@ export function createPeer(peerId?: string) {
         },
       ],
     },
-  });
+  };
+
+  return peerId ? new Peer(peerId, options) : new Peer(undefined as any, options);
 }
